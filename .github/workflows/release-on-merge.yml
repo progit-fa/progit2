@@ -33,6 +33,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        allowUpdates: true
         tag: ${{ steps.compute-tag.outputs.tagname }}
         commit: main
         artifacts: './progit.epub,./progit.fb2.zip,./progit.mobi,./progit.pdf,./progit.html'
